@@ -1,0 +1,17 @@
+.exe{
+    float: left;
+    margin-left: 40%;
+}
+
+.table{
+   
+    margin-left: 40%;
+  }
+
+  th, td {
+    padding: 10px;
+    border: 1px solid black;
+    text-align: left;
+    background-color: grey;
+
+  }
