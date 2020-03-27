@@ -1,0 +1,52 @@
+a{
+    text-decoration: none;
+}
+.icon{
+    margin-right: 5%;
+    margin-top: 0.5%;
+    
+}
+.icon a:link{
+    color: black;
+}
+.icon a:visited{
+    color: black;
+}
+.icon a:hover{
+    color: #B69F5B;  
+}
+.menu{
+    background-color: white;
+    float: left;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 0%;
+    height: 60px;
+    border-radius: 5px;
+}
+.body{
+    background-color: rgb(202, 199, 193);
+}
+
+.option{
+    list-style: none;
+    display: inline;
+    margin-left: 2%; 
+    font-size: 120%;
+    font-family:  'Arial';
+}
+
+.option a:link{
+    color: black;
+}
+
+.option a:visited{
+    color: black;
+}
+
+.option a:hover{
+    color: #B69F5B;
+}
+.table, th, td {
+    border: 1px solid black;
+  }

@@ -20,7 +20,6 @@ session_start();
 			$n = intval($_POST['nombre']);
 			$tabA = array("inferieur" => array(), 
 						  "superieur" => array());
-
 			if ($n <= 10000){
 				echo "veuillez saisir un nombre supérieur à 10000";
 			}
@@ -44,22 +43,17 @@ session_start();
 			$_SESSION[$tp] = $t;
 		}
 
-	// ICI DEBUTE LA PAGINATION DU TABLEAU $_SESSION[$tp]
+	//  PAGINATION DU TABLEAU $_SESSION[$tp]
 	if (isset($_SESSION[$tp])) {
 	$NbreParPage = 100;
 	$valeurTotal = sizeof($_SESSION[$tp]);
 	$NbreDePage = ceil($valeurTotal / $NbreParPage);
 	
-		if(isset($_GET['page'])) // Si la variable $_GET['page'] existe...
-		{
+		if(isset($_GET['page'])){ // Si la variable $_GET['page'] existe
 			$pageActuelle=$_GET['page'];
-			
 		}
 		else{ $pageActuelle=1;
 		}
-		// Tu as en pas besoin
-		// $indiceDebut = ($pageActuelle - 1) * $NbreParPage;
-		// $indiceFin = $indiceDebut + $NbreParPage;
 		echo "<br/>";echo "<br/>";
 		echo'
 		<div style=" float: left ;width: 40%; height: 40%; background-color: white;">
@@ -88,23 +82,17 @@ session_start();
 		}
 	}
 	echo "<br><br><br>";
-	// fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
-
-		
-
 
 		$somme = 0;
 		for ($i = 0; $i < count($t); $i++){
 			$somme += $t[$i]; 
 		}
-
 		$moyenne = $somme / count($t);
 		echo "La moyenne est:  " .$moyenne;
-
 		echo "<br/>";
 		echo "<br/>";
 
-	
+	//Les tableau inférieurs et superieurs
 		$k=0;
 		$l=0;
 		for ($i = 0; $i < count($t); $i++){
@@ -112,37 +100,26 @@ session_start();
 
 				$tabA["inferieur"][$k] = $t[$i];
 				$k++;
-
 			}
-
 			else{
 				$tabA["superieur"][$l] = $t[$i];
-				$l++;
-			
+				$l++;	
 		}
-
 	}
-
-			echo "les valeurs inférieurs à la moyenne sont: ";
-			echo "<br/>";
-			echo "<br/>";
-			
+	?>
+		<label>les valeurs inférieurs à la moyenne sont</label><br/><br/>
+	<?php		
 			for ($i = 0; $i< count($tabA["inferieur"]); $i++){
 				echo $tabA["inferieur"][$i]. '  ';
 			}
-
 			echo "<br/>";
 			echo "<br/>";
-	
-			echo "les valeurs superieurs à la moyenne sont: ";
-			echo "<br/>";
-			echo "<br/>";
+	?>
+			<label>les valeurs superieurs à la moyenne sont</label><br/><br/>
+		<?php	
 			for ($i = 0; $i< count($tabA["superieur"]); $i++){
 				echo $tabA["superieur"][$i]. '  ';
 			}
-	
-
 	 ?>
-
 </body>
 </html>

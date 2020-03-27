@@ -5,8 +5,8 @@
              <meta charset="utf-8">
              <link rel="stylesheet" type="" href="css/style.css" />
     </head>
-    <body class="body">
-          <div class="exe">
+    <body>
+          <div class="form">
                 <h4>Exercice 2 </h4>
                 <form action="" method="POST">
                 <select name="choix" id="choix" style="font-size: 15px">

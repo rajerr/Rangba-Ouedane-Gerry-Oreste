@@ -1,11 +1,6 @@
-.exe{
-    float: left;
-    margin-left: 40%;
-}
-
 .table{
-   
-    margin-left: 40%;
+   position: absolute;
+    margin-left: -40%;
   }
 
   th, td {
@@ -14,4 +9,7 @@
     text-align: left;
     background-color: grey;
 
+  }
+  .form{
+    margin-left: 30%;
   }

@@ -1,0 +1,164 @@
+@import url(//db.onlinewebfonts.com/c/05289e866fe7e1e99d27a7a31f8d3b66?family=Trattatello);
+
+.formulaire{
+    background-color:rgb(40, 161, 209);
+    width: 40%;
+    margin-left: 30%;
+    height: 665px;
+    float: left;
+    text-align: center;
+    font-family: 'Arial';
+    border-radius: 5px;
+}
+.academy{
+    font-family: 'Trattatello';
+    font-size: 250%;
+    width: 100%;
+    font-style: bold;
+    margin-top: -3%;
+}
+.select{
+    color: white;
+    font-family: 'Arial';
+    font-size: 100%;
+    width: 60%;
+    margin-left: 22%;
+    margin-top: -5%;
+    height: 20px;
+    text-align: left;
+}
+.select1{
+    color: white;
+    font-family: 'Arial';
+    font-size: 100%;
+    width: 60%;
+    margin-top: 1%;
+    margin-left: 22%;
+    height: 20px;
+    text-align: left;
+}
+.select2{
+    color: white;
+    font-family: 'Arial';
+    font-size: 100%;
+    width: 60%;
+    margin-top: 1%;
+    margin-left: 22%;
+    height: 20px;
+    text-align: left;
+}
+.select3{
+    color: white;
+    font-family: 'Arial';
+    font-size: 100%;
+    width: 60%;
+    margin-top: 1%;
+    margin-left: 22%;
+    height: 20px;
+    text-align: left;
+}
+.icon_1{
+    background-color: rgb(7, 7, 167);
+    position: absolute;
+    border-radius: 5px 0 0 5px;
+    height: 37px;
+    width: 35px;
+    margin-top: -0.6%;
+    margin-left: -0.6%;
+    margin-right: 2%;
+}
+.img{
+    margin-top: 25%;
+}
+.img1{
+    margin-top: 50%;
+}
+.icon_2{
+    background-color: red;
+    position: absolute;
+    margin-left: -0.6%;
+    margin-top: -1.2%;
+    border-radius: 5px 0 0 5px;
+    height: 50px;
+    width: 35px;
+}
+.icon_3{
+    background-color:green;
+    position: absolute;
+    margin-left: -0.6%;
+    margin-top: -1.2%;
+    border-radius: 5px 0 0 5px;
+    height: 50px;
+    width: 35px;
+}
+.icon_4{
+    background-color: grey;
+    position: absolute;
+    margin-left: -0.6%;
+    margin-top: -1.2%;
+    border-radius: 5px 0 0 5px;
+    height: 50px;
+    width: 35px;
+}
+.champs{
+    width: 60%;
+    margin-left: 5%;
+    height: 50px;
+    margin-top: -3%;
+    border-radius: 0 5px 5px 0;
+    color: red;
+}
+.champss{
+    width: 60%;
+    margin-left: 5%;
+    height: 50px;
+    margin-top: -3%;
+    border-radius: 0 5px 5px 0;
+    color: green;
+}
+.champsss{
+    width: 60%;
+    margin-left: 5%;
+    height: 50px;
+    margin-top: -3%;
+    border-radius: 0 5px 5px 0;
+    color: grey;
+}
+.input{
+    width: 58%;
+    margin-left: 5%;
+    margin-top: -30%;
+    height: 30px;
+    border-radius: 0 5px 5px 0;
+}
+table {
+    width:50%;
+    margin-left: 25%;
+    height: 50px;
+  }
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+th, td {
+    padding: 10px;
+    text-align: left;
+  }
+.dessiner{
+    background-color: rgb(204, 204, 78);
+    color: white;
+    height: 40px;
+    width: 20%;
+    margin-left: 10%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
+.annuler{
+    background-color: grey;
+    color: white;
+    height: 40px;
+    width: 20%;
+    margin-right: 10%;
+    border-radius: 5px;
+    margin-bottom: 2%;
+}
