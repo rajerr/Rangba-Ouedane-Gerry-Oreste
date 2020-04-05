@@ -25,11 +25,13 @@
         if(isset($_GET['n'])){
             $m=$_GET['n'];
             if($m=="exo1"){
-                include("Exoun/exo1.php");
+                include("Exo1/exo1.php");
             }elseif($m=="exo2"){
-                include("Exodeux/exo2.php");
+                include("Exo2/exo2.php");
             }elseif($m=="exo3"){
                 include("Exo3/exo3.php");
+            }elseif($m=="exo4"){
+                include("exo4/exo4.php");
             }
         }
     ?>

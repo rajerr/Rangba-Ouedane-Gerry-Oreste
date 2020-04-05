@@ -8,28 +8,64 @@
 <body>
         <form action="" method="post" style="margin-left:35%">
             <label class="label" style="">Combien de Mots</label><br><br>
-            <input class=""type="text" name="num" placeholder="donner un nombre" /><br><br>
+            <input class=""type="text" name="num" placeholder="donner un num" value="<?php if((isset($_POST['num'])) && 
+            ($_POST['num']>0)){ echo $_POST['num'];} ?>"/><br><br>
             <input class="btn_valider" type="submit" value="envoyer" name="valider">
             <input class="btn_annuler" type="reset" value="annuler" name="annuler"><br><br>
-
+        
 <?php
 if(isset($_POST['valider'])){
     $num = (int)$_POST["num"];
         if($num<=0){
-            echo "veuillez saisir un entier positif";
-    }else{
-        for($i = 1; $i <=$num ; $i++){
-            $strnote = "Mot ".$i;
-            echo "<label>$strnote</label><br>";
-            echo '<input type="text" name="m[]"/>';
-            echo "<br><br>";
-      }
-    }
+            echo '<div style="color: #f9150e; margin-top: 2%; font-size: 20px">veuillez saisir un entier positif</div>';
+            echo "<br>";
+        }else{
+            for($i = 1; $i <=$num ; $i++){
+                $libelle = "Mot ".$i;
+                echo "<label>$libelle</label><br>";
+                echo '<input type="text" name="m'.$i.'"  value="';
+                if(isset($_POST["mot$i"])){
+                    echo $_POST["mot$i"];
+                }
+                echo  ' "/>';
+                echo "<br><br>";
+            }
+        ?>
+           <button class="btn_resultat" name="resultat" id="resultat">Resultat</button>
+         </form>
+        <?php
+                $error = '';
+                $num=  $_POST['num'];
+                $nbre_mot = 0;
+                for ($i=1; $i<=$nombre;$i++){
+                    if(isset($_POST['resultat'])){
+                        if(isset($_POST["m$i"])){
+                            if(empty($_POST["m$i"])){
+                                $error= 'Donner un mot';
+                            }
+                            else {
+                                $m = $_POST["m$i"];
+                                if(preg_match('#[^a-zA-Z^-]#', $m)){
+                                    $error= 'Donner un mot';
+                                }
+                                else{
+                                    if(preg_match("#M#i", $m)) {
+                                        $nbre_mot= $nbre_mot + 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }if(isset($nbre_mot) && $nbre_mot!=0){
+                     echo "<span class='info'>Vous avez saisi $length Mot(s) dont $nbr_mot avec la lettre M</span>";
+                }
 ?>
-     <button class="btn_resultat" name="resultat" id="resultat">Resultat</button>
+                 
 <?php
-
- function toUpperString(string $string){
+    } 
+} 
+// fonctions
+function toUpperString(string $string){
     $length = getStringlength($string);
     $result = "";
     for ($i=0; $i < $length ; $i++) { 
@@ -77,22 +113,7 @@ function toUpper($char){
         }
     }
     return $char;
-}
-} if(isset($_POST["resultat"])){
-    $nbr_mot = 0;
-    $length = getLength($_POST['m']);
-    for ($i=0; $i < $length; $i++) { 
-        $string = toUpperString($_POST["m"][$i]);
-        if(isIn($string,"M")>=0){
-            $nbr_mot++;
-        }
-    }
-    echo "Vous avez saisi $length Mot(s) dont <span>$nbr_mot avec la lettre M</span>";
-}    
-?>
- </form>
-
-    
+}   ?>
 </body>
 </html>
 <style>
@@ -101,6 +122,7 @@ function toUpper($char){
         height: 35px;
         width:12%;
         color:white;
+        border-radius:10px;
     }
     .btn_annuler{
         margin-left:3%; 
@@ -108,6 +130,7 @@ function toUpper($char){
         height: 35px; 
         color:white;
         width:12%;
+        border-radius:10px;
     }
     .btn_resultat{
         margin-left:8%; 
@@ -115,12 +138,16 @@ function toUpper($char){
         height: 35px; 
         width:12%;
         color:white;
+        border-radius:10px;
     }
     .label{
         margin-left:5%
         
     }
-    .input{
-
+    .info{
+        font-size: 30px; 
+        background-color: grey; 
+        margin-top: 3%; 
+        height: 70px;
     }
 </style>

@@ -82,7 +82,6 @@ session_start();
 		}
 	}
 	echo "<br><br><br>";
-
 		$somme = 0;
 		for ($i = 0; $i < count($t); $i++){
 			$somme += $t[$i]; 
