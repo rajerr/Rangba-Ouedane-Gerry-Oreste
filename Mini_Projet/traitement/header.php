@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
-    <title>Document</title>
+    <title>entete</title>
 </head>
 <header>
     <div>
@@ -16,7 +16,9 @@
 <body>
             <div class="sous-entete">
                 <libelle class="libelle-sous">CREER ET PARAMETRER VOS QUIZ</libelle>
-                <button class="btn-deconnexion" type="button" name="deconnexion" value="deconnexion">Deconnexion</button> 
+                <form method="POST" action="deconnexion.php">
+                    <input class="btn-deconnexion" type="submit" name="deconnexion" value="deconnexion"/>
+                </form>
             </div>
     
 </body>

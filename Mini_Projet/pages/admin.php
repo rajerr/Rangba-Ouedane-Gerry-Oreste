@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,29 +13,32 @@
 </head>
 <?php
    require "header.php";
+   $users = file_get_contents('json/users.json');
+   $users = json_decode($users, true);
 ?>
 <body>
 <form method="get" action="connexion.php">
     <div class="container">
        <div class="contenu">
             <div class="profil">
-                <img class="avatar" src="" alt="">
-                <label></label>
+                <img class="avatar" src="/../Images/avatar/<?php echo $_SESSION['profil']?>" alt=""/><br>
+                <label class="label_identy"><?php echo $_SESSION['nom']?></label>
+                <label class="label_identy"><?php echo $_SESSION['prenom']?></label>
             </div>
         <div class="menu">
-               <a  href="#"><a href="index.php?p=liste_questions" class="label-decor"> 
+               <a  href="#"><a href="index1.php?p=liste_questions" class="label-decor"> 
                    <img class="icon-menu"src="Images/Icônes/ic-liste-active.png">
                     <h4 class="label-menu">Liste Questions</h4>
                 </a>
-                <ahref="#"><a href="index.php?p=creer_admin"  class="label-decor">
+                <ahref="#"><a href="index1.php?p=creer_admin"  class="label-decor">
                     <img class="icon-menu"src="Images/Icônes/ic-ajout.png">
                     <h4 class="label-menu"> Créer Admin</h4>
                 </a>
-                <a href="#"><a href="index.php?p=liste_joueurs" class="label-decor">
+                <a href="#"><a href="index1.php?p=liste_joueurs" class="label-decor">
                     <img class="icon-menu"src="Images/Icônes/ic-liste.png">
                     <h4 class="label-menu"> Liste Joueurs</h4>
                 </a>
-                <a href="#"><a href="index.php?p=creer_joueurs"  class="label-decor">
+                <a href="#"><a href="index1.php?p=creer_joueurs"  class="label-decor">
                     <img class="icon-menu"src="Images/Icônes/ic-ajout.png">
                     <h4 class="label-menu"> Créer Joueurs</h4>
                 </a>

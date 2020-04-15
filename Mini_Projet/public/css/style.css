@@ -1,10 +1,8 @@
 body{
     font-family: 'open sans';
-    /* background-image: url('Images/img-bg.jpg'); */
-    background-image: url("/Images/img-bg.jpg");
+    background-image: url("/Mes_Exos/Mini_Projet/Images/img-bg.jpg");
     background-size: cover;
     text-decoration: none;
-    opacity: 9%;
 }
 header{
     width: 100%;
@@ -38,6 +36,13 @@ header{
     height: 80px;
     background-color: #6fcff5;
 }
+.sous-entete-joueur{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 1%;
+    height: 80px;
+    background-color: #6fcff5;
+}
 
 .label-login{
     background-color: #6fcff5;
@@ -46,10 +51,10 @@ header{
 }
 .label{
     font-family: 'open sans';
+    font-size: 100%;
+    margin-top: 25%;
     color: white;
     margin-left: 5%;
-    font-size: 60%;
-    margin-top: 10%;
     font-style: bold;
 }
 .libelle-sous{
@@ -61,10 +66,19 @@ header{
     margin-top: 1%;
     font-style: bold;
 }
+.libelle-sous-joueur{
+    font-family: 'open sans';
+    position: absolute;
+    color: white;
+    margin-left: 20%;
+    font-size: 150%;
+    margin-top: -6.5%;
+    font-style: bold;
+}
 .input-login{
     font-family: 'open sans';
     font-size: 100%;
-    height: 60px;
+    height: 50px;
     width: 80%;
     font-style: bold;
     margin-left: 10%;
@@ -73,7 +87,7 @@ header{
 .input-password{
     font-family: 'open sans';
     font-size: 100%;
-    height: 60px;
+    height: 50px;
     width: 80%;
     margin-top: 2%;
     font-style: bold;
@@ -83,7 +97,7 @@ header{
     margin-top: 10%;
     margin-left: 25%;
     width: 40%;
-    height: 300px;
+    height: 325px;
     background-color: white;
 }
 .icon-login{
@@ -118,6 +132,17 @@ header{
     margin-top: 2%;
     font-family: 'open sans';
 }
+.btn-deconnexion-j{
+    background-color: #6ef2f6;
+    border-radius: 5px;
+    height: 40px;
+    width: 10%;
+    position: absolute;
+    color: white;
+    margin-left: 75%;
+    margin-top: -5%;
+    font-family: 'open sans';
+}
 .lien-inscri{
     text-decoration: none;
     font-family: 'open sans';
@@ -145,15 +170,35 @@ header{
     background-image: linear-gradient(white, skyblue);
     height: 170px;
 }
+.profil_joueur{
+    background-image: linear-gradient(skyblue);
+
+}
 .avatar {
     vertical-align: middle;
     width: 100px;
     height: 100px;
     margin-left: 20%;
     margin-top: 10%;
-    background-color: white;
     border-radius: 50%;
+    background-color: rgb(226, 225, 225);
 
+  }
+  .avatar_joueur {
+    vertical-align: middle;
+    width: 55px;
+    height: 55px;
+    margin-left: 5%;
+    border-radius: 50%;
+    background-color: rgb(226, 225, 225);
+
+  }
+  .label_identy{
+    text-decoration: none;
+    font-family: 'open sans';
+    color:white;
+    font-size: 120%;
+    margin-left: 1.5%;
   }
 .menu{
     margin-top: 10%;
@@ -237,5 +282,11 @@ header{
     font-size: 20px;
     color: grey;
     font-family: 'open sans';
-
+}
+.erreur{
+    color: red;
+    margin-left: 20%;
+    font-family: 'open sans';
+    font-style: bold;
+    margin-top: 5%;
 }
