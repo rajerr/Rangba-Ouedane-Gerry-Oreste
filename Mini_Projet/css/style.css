@@ -1,6 +1,6 @@
 body{
     font-family: 'open sans';
-    background-image: url("/Mes_Exos/Mini_Projet/Images/img-bg.jpg");
+    background-image: url("/Mini_pro/Images/img-bg.jpg");
     background-size: cover;
     text-decoration: none;
 }
@@ -37,10 +37,10 @@ header{
     background-color: #6fcff5;
 }
 .sous-entete-joueur{
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 1%;
+    width: 94%;
+    margin-left: 3%;
     height: 80px;
+    margin-top: 0.5%;
     background-color: #6fcff5;
 }
 
@@ -97,17 +97,15 @@ header{
     margin-top: 10%;
     margin-left: 25%;
     width: 40%;
-    height: 325px;
+    height: 350px;
     background-color: white;
 }
 .icon-login{
-    float: right;
-    margin-right: 3%;
+    margin-left: -7%;
     margin-top: 8%;
 }
 .icon-password{
-    float: right;
-    margin-right: 3%;
+    margin-left: -7%;
     margin-top: 5%;
 }
 .btn-connexion{
@@ -191,7 +189,6 @@ header{
     margin-left: 5%;
     border-radius: 50%;
     background-color: rgb(226, 225, 225);
-
   }
   .label_identy{
     text-decoration: none;
@@ -219,10 +216,10 @@ header{
 }
 .content{
     float: left;
-    background-color: #eaecec;
+    background-color: #e9f8f8;
     width: 45%;
-    margin-left: 35%;
-    margin-top: 5%;
+    margin-left: 43%;
+    margin-top: -50%;
     height: 550px;
     position: absolute;
     box-shadow: 4px 4px 4px 4px #aaa;
@@ -237,6 +234,29 @@ header{
     border-color: skyblue;
     position: absolute;
     text-decoration: none;
+}
+.div-list-nom{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 2%;
+    width: 34%;
+    height: 400px;
+}
+.div-list-prenom{
+    position: absolute;
+    margin-top: 8%;
+    margin-left: 38%;
+    height: 400px;
+    width: 38%;
+}
+.div-list-score{
+    position: absolute;
+    text-align: right;
+    font-size: 30%;
+    height: 400px;
+    width: 25%;
+    margin-left: 79%;
+    margin-top: 8%;
 }
 .border_content_lq{
     border-radius: 10px;
@@ -254,7 +274,34 @@ header{
     margin-left: 25%;
     font-size: 20px;
     font-style: italic;
-    color: grey;
+    color: rgb(82, 82, 82);
+}
+.label-title-nom{
+    float: left;
+    margin-left: 2%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(77, 75, 75);
+}
+.label-title-prenom{
+    float: left;
+    margin-left: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(77, 75, 75);
+}
+.label-title-score{
+    float: left;
+    margin-left: 20%;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(77, 75, 75);
+}
+.label-list-joueur{
+    float: left;
+    margin-right: 15%;
+    font-size: 20px;
+    color: rgb(102, 100, 100);
 }
 .btn{
     float: left;
@@ -267,6 +314,18 @@ header{
     height: 30px;
     text-decoration: none;
     border-radius: 5px;
+}
+.btn-list-question{
+    float: left;
+    margin-left: 55%;
+    margin-top: 80%;
+    position: absolute;
+    background-color: #6ef2f6;
+    color: white;
+    width: 20%;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 5px;  
 }
 .btn_ok{
     border-radius: 4px;
@@ -288,5 +347,169 @@ header{
     margin-left: 20%;
     font-family: 'open sans';
     font-style: bold;
+    margin-top: 1%;
+}
+.div-creer-joueur{
+    background-color: aliceblue;
+    margin-top: -45%;
+    width: 50%;
+    height: 530px;
+    margin-left: 40%;
+    border-radius: 5px;
+    box-shadow: 8px;
+    position: absolute;
+    font-family:  'Open Sans';
+    color: rgb(93, 92, 92);
+}
+.div-nouveau-joueur{
+    background-color: aliceblue;
+    margin-top: 1%;
+    width: 60%;
+    height: 530px;
+    margin-left: 20%;
+    border-radius: 5px;
+    box-shadow: 8px;
+    font-family:  'Open Sans';
+    color: rgb(93, 92, 92);
+}
+.div-entete-joueur{
+    font-weight: bold;
+    width: 60%;
+    box-shadow: 0px 0px 1px 0px rgb(167, 165, 165);
+}
+.div-h-joueur{
+    margin-left: 5%;
+    color: rgb(22, 20, 20);
+    font-family:  'Open Sans';
+    font-style: bold;
+    font-size: 150%;
+}
+.div-label-joueur{
+    margin-left: 5%;
+}
+.div-input-joueur{
+    width: 50%;
+    margin-left: 5%;
+    height: 35px;
+    color: rgb(15, 13, 13);
+}
+
+.div-btn-creer-user{
+    background-color: #6ef2f6;
+    border-radius: 5px;
+    height: 40px;
+    color: white;
+    font-family: 'open sans';
+    margin-left: 15%;
+}
+.div-file{
+    height: 200px;
+    width: 25%;
+    margin-left: 65%;
+    margin-top: 2%;
+    position: absolute;
+}
+.div-file-j{
+    height: 200px;
+    width: 18%;
+    margin-left: 35%;
+    margin-top: 2%;
+    position: absolute;
+}
+.avatar-img-j{
+    vertical-align: middle;
+    width: 150px;
+    height: 150px;
+    margin-left: 10%;
+    margin-top: 10%;
+    border-radius: 50%;
+    border: 0.5em;
+    border-color:skyblue;
+    border-style: solid;
+    background-color: rgb(226, 225, 225);
+}
+.div-avatar-joueur{
+    float: left;
+    margin-left: 22%;
     margin-top: 5%;
+    color: rgb(22, 20, 20);
+    font-family:  'Open Sans';
+    font-style: bold;
+}
+.interface-joueur{
+    background-color: white;
+    width: 94%;
+    height: 450px;
+    margin-left: 3%;
+}
+.menu-jeux{
+    width: 60%;
+    height: 430px;
+    margin-top: 0.5%;
+    margin-left: 1.5%;
+    position: absolute;
+    border: solid;
+    border-color: rgb(76, 171, 209);
+    border-radius: 20px;
+}
+.titre-question{
+    width: 90%;
+    height: 90px;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.question{
+    height: 200px;
+    width:60%;
+    margin-left: 20%;
+    margin-top: 10%;
+    font-family: 'Open Sans';
+    font-family: 80px;
+}
+.div-btn{
+    width:90%;
+}
+.label-joueur{
+    float: left;
+    margin-left:30% ;
+    font-size: 35px;
+    color: rgb(19, 18, 18);
+}
+.btn-precedent{
+    float: left;
+    background-color: rgb(95, 93, 93);
+    color: white;
+    width: 20%;
+    height: 40px;
+    margin-left: 5%;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btn-suivant{
+    float: left;
+    background-color: #6ef2f6;
+    color: white;
+    width: 20%;
+    height: 40px;
+    margin-left: 55%;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.score{
+    position: absolute;
+    width: 25%;
+    margin-left: 65%;
+    margin-top: 5%;
+    height: 250px;
+    background-color: grey;
+}
+.enregistrer-question{
+    float: left;
+    background-color: #edf7fa;
+    width: 50%;
+    margin-left: 40%;
+    height: 600px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px #aaa;
 }
