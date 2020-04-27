@@ -1,18 +1,21 @@
 <?php
 
 if(isset($_POST["creer"])) {
-    var_dump($_POST);
     $error="";
     $file_name = $_FILES['fichier']['name'];
+
     if(empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['login']) && 
     empty($_POST['password']) && empty($_POST['c_password']) && empty($_FILES['fichier'])){
+
         $error=" veuillez remplir tous les champs";
+
     }else{
         $data=file_get_contents('../json/users.json');
-        $js=json_decode($data,true);
+        $js=json_decode($data,true);           
+        
         foreach($js as $value){
-            if($value['login']==$_POST['login']){
-                $error="Ce compte existe déja, veuillez changer le login";
+            if($value['login']== $_POST['login']){
+                 $error="Ce compte existe déja, veuillez changer le login";
             break;
             }else{
                 if($_POST['password']!= $_POST['c_password']){
@@ -20,11 +23,12 @@ if(isset($_POST["creer"])) {
                 break;
                 }else{
                     $user=array();
-                    $user['profil']="admin";
+                    $user['profil']="joueur";
                     $user['prenom']=$_POST['prenom'];
                     $user['nom']=$_POST['nom'];
                     $user['login']=$_POST['login'];
                     $user['password']=$_POST['password'];
+                    $user['score']=0;
                     $user['photo']=$file_name;
                    
         
@@ -42,25 +46,41 @@ if(isset($_POST["creer"])) {
             $js[]=$user;
             $js=json_encode($js);
             file_put_contents('../json/users.json',$js);
-            header('location:../pages/index1.php');
+            header('location:../index.php');
                 }
             }
+        
         }
-       
 
 }
 }
 ?>
-    <div class="div-creer-joueur">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css<?php echo "?".rand(); ?>">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"> 
+    <title>Créer joueur</title>
+</head>
+<header>
+    <div>
+        <img class="img-header" src="../Images/logo-QuizzSA.png">
+        <h3 class="label-header">Le plaisir de jouer</h3>
+    </div>   
+</header>
+<body>
+    <div class="div-nouveau-joueur">
         <div class="div-entete-joueur">
             <label class="div-h-joueur">S'INSCRIRE</label><br>
-            <label class="div-label-joueur" >Pour proposer des Quizz</label>
+            <label class="div-label-joueur" >Pour tester votre niveau de culture Générale</label>
         </div>
-        <div class="div-file">
+        <div class="div-file-j">
             <img class="avatar-img-j"  alt="" id="avatar" value="<?php if(isset($_POST['fichier'])){echo $_POST['fichier'];}?>">
-            <label class="div-avatar-joueur" for="">  Avatar    Admin</label>
+            <label class="div-avatar-joueur" for="">Avatar du joueur</label>
         </div>
-        <form action="" method="post" enctype="multipart/form-data" id="form-joueur">
+        <form action="" method="POST" enctype="multipart/form-data" id="form-joueur">
             <label class="div-label-joueur" for="">Prenom</label><br>
             <input class="div-input-joueur" type="text" name="prenom" error="error-1" placeholder=" Entrer votre prenom" 
             value="<?php if(isset($_POST['prenom'])){echo $_POST['prenom'];}?>"><br>
@@ -97,7 +117,9 @@ if(isset($_POST["creer"])) {
                 <?php if(isset($error)){ echo $error; }?>
         </div>
     </div>
-    <script  type="text/javascript" src="js/quizzcreation.js"></script>
+</body>
+<script  type="text/javascript" src="js/quizzcreation.js"></script>
+</html>
 <script>
 var loadFile = function(event) {
     var avatar = document.getElementById('avatar');

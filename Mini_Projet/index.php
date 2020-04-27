@@ -1,6 +1,6 @@
 <?php
  session_start();
- require("pages/connexion.php")
+ require_once("pages/connexion.php")
  ?>
 
 <!DOCTYPE html>
@@ -25,7 +25,7 @@
                         <label class="password"><img class="icon-password" src="Images/Icônes/ic-password.png"></label>
                         <div class="erreur" id="error-2"> </div>
                         <input class="btn-connexion" type="submit" name="connexion" value="Connexion"/>
-                        <a class="lien-inscri" href="creation/nouveaujoueur.php"><strong>S'inscrire pour jouer?</strong></a>
+                        <a class="lien-inscri" href="creation/creerjoueur.php"><strong>S'inscrire pour jouer?</strong></a>
                 </form>
                 <div class="erreur">
                         <?php if(isset($error)){ echo $error; }?>

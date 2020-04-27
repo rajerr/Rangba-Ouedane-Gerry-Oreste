@@ -224,9 +224,19 @@ header{
     position: absolute;
     box-shadow: 4px 4px 4px 4px #aaa;
 }
+.content-liste-j{
+    float: left;
+    background-color: #e9f8f8;
+    width: 45%;
+    margin-left: 43%;
+    margin-top: -48%;
+    height: 550px;
+    position: absolute;
+    box-shadow: 4px 4px 4px 4px #aaa;
+}
 .border_content{
     border-radius: 10px;
-    margin-top: 10%;
+    margin-top: -80%;
     margin-left: 15%;
     width: 70%;
     height: 450px;
@@ -237,26 +247,26 @@ header{
 }
 .div-list-nom{
     position: absolute;
-    margin-top: 8%;
     margin-left: 2%;
     width: 34%;
     height: 400px;
+    margin-top: 5%;
 }
 .div-list-prenom{
     position: absolute;
-    margin-top: 8%;
     margin-left: 38%;
     height: 400px;
     width: 38%;
+    margin-top: 5%;
 }
 .div-list-score{
     position: absolute;
     text-align: right;
-    font-size: 30%;
+    font-size: 100%;
     height: 400px;
     width: 25%;
-    margin-left: 79%;
-    margin-top: 8%;
+    margin-left: 62%;
+    margin-top: 5%;
 }
 .border_content_lq{
     border-radius: 10px;
@@ -271,10 +281,17 @@ header{
 }
 .title{
     float: left;
-    margin-left: 25%;
+    margin-left: 20%;
     font-size: 20px;
     font-style: italic;
     color: rgb(82, 82, 82);
+}
+.title_question{
+    float: left;
+    margin-left: 20%;
+    font-size: 20px;
+    font-style: bold;
+    color: rgb(41, 194, 214);
 }
 .label-title-nom{
     float: left;
@@ -305,7 +322,41 @@ header{
 }
 .btn{
     float: left;
-    margin-left: -12%;
+    margin-left: 45%;
+    position: absolute;
+    background-color: #6ef2f6;
+    color: white;
+    width: 12%;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.btnbtn{
+    float: left;
+    margin-left: -30%;
+    position: absolute;
+    background-color: #989e9e;
+    color: white;
+    width: 15%;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.active{
+    background-color: rgb(3, 117, 117);
+    border-radius: 5px;
+    color: white;
+}
+.pagination{
+    margin-top: 89%;
+    margin-left: 35%;
+    height: 30px;
+    width: 30%;
+    width: 10%;
+}
+.btn-svt{
+    float: left;
+    margin-left: -7%;
     margin-top: 89%;
     position: absolute;
     background-color: #6ef2f6;
@@ -497,19 +548,108 @@ header{
 }
 .score{
     position: absolute;
-    width: 25%;
-    margin-left: 65%;
+    width: 17.5%;
+    margin-left: 70%;
     margin-top: 5%;
-    height: 250px;
-    background-color: grey;
+    height: 300px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px 4px #aaa;
 }
 .enregistrer-question{
     float: left;
-    background-color: #edf7fa;
+    background-color: #f8ffff;
     width: 50%;
     margin-left: 40%;
+    margin-top: -49%;
     height: 600px;
     position: absolute;
     border-radius: 5px;
     box-shadow: 4px 4px 4px 4px #aaa;
+}
+.div-score-top{
+    width: 18%;
+    height: 200px;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 7%;
+}
+.div-score{
+    width: 18%;
+    height: 200px;
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 7%;
+    color: rgb(70, 191, 239);
+
+}
+.btn-top-score{
+color: rgb(85, 82, 82);
+}
+.btn-m-score{
+color: skyblue;
+}
+.champs-saisie{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10%;
+    height: 500px;
+    border-radius: 20px;
+    border: solid skyblue;
+}
+.btn-q{
+    background-color: skyblue;
+    font-size: 20px;
+    border-radius: 2px;
+}
+.label-qs{
+    font-size: 20px;
+    color: rgb(109, 107, 107);
+
+}
+.input{
+    border-radius: 5px;
+    border:1px solid skyblue;
+    font-size: 20px;
+    margin-bottom: 5%;
+}
+.area{
+    height: 15%;
+    width: 80%;
+}
+.qs{
+    width: 60%;
+    margin-top: 2%;
+    font-size: 20px;
+    color: rgb(109, 107, 107);
+    background-color: white;
+}
+.option{
+    background-color: white;
+    color: skyblue;
+}
+.nbr{
+    width: 20%;
+}
+.btn-e{
+    float: left;
+    margin-left: 70%;
+    margin-top: -6%;
+    background-color: #6ef2f6;
+    color: white;
+    width: 20%;
+    height: 30px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.rows{
+    margin-top: -5%;
+}
+.row{
+    width: 65%;
+}
+.btn-i{
+    border: none;
+    background-color: none;
+    position: absolute;
+    margin-top: 1%;
 }

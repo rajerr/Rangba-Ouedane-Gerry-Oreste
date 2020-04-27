@@ -29,5 +29,3 @@ document.getElementById("form-joueur").addEventListener("submit",function(e){
     return false
 })
 
-
-

@@ -13,7 +13,6 @@ session_start();
 </head>
 <?php
    include_once("header.php");
-   include_once("../pages/enregistrerquestion.php");
    $users = file_get_contents('json/users.json');
    $users = json_decode($users, true);
 ?>
@@ -39,9 +38,9 @@ session_start();
                     <img class="icon-menu"src="../Images/Icônes/ic-liste.png">
                     <h4 class="label-menu"> Liste Joueurs</h4>
                 </a>
-                <a href="#"><a href="index1.php?p=creer_joueurs"  class="label-decor">
+                <a href="#"><a href="index1.php?p=creer_questions"  class="label-decor">
                     <img class="icon-menu"src="../Images/Icônes/ic-ajout.png">
-                    <h4 class="label-menu"> Créer Joueurs</h4>
+                    <h4 class="label-menu"> Créer Questions</h4>
                 </a>
         </div>
        </div>
@@ -56,8 +55,8 @@ session_start();
                 include_once("../pages/creeradmin.php");
             }elseif($m=="liste_joueurs"){
                 include_once("../pages/listejoueur.php");
-            }elseif($m=="creer_joueurs"){
-                include_once("../pages/creerjoueur.php");
+            }elseif($m=="creer_questions"){
+                include_once("../pages/creerquestion.php");
             }
         }
     ?>

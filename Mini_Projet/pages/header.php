@@ -16,7 +16,7 @@
 <body>
             <div class="sous-entete">
                 <libelle class="libelle-sous">CREER ET PARAMETRER VOS QUIZ</libelle>
-                <form method="POST" action="/Mini_pro/index.php">
+                <form method="POST" action="../index.php?statut=logout">
                     <input class="btn-deconnexion" type="submit" name="deconnexion" value="Deconnexion"/>
                 </form>
             </div>

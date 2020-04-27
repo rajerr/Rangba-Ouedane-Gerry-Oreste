@@ -14,6 +14,7 @@ if(isset($_POST['connexion'])) {
                                         $_SESSION['prenom']=$users[$j]['prenom'];
                                         $_SESSION['nom']=$users[$j]['nom'] ;
                                         $_SESSION['profil']=$users[$j]['photo'];
+                                        $_SESSION['score']=$users[$j]['score'];
                                         header('Location:pages/index2.php');    
                                         }else{
                                                 $j=$i;

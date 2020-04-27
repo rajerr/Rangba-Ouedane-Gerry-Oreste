@@ -23,7 +23,7 @@ session_start();
     ?>
 <div class="sous-entete-joueur">
             <div class="profil_joueur">
-            <img class="avatar_joueur" src="/Mini_pro/Images/avatar/<?php echo $_SESSION['profil']?>" alt=""/><br>
+            <img class="avatar_joueur" src="../Images/avatar/<?php echo $_SESSION['profil']?>" alt=""/><br>
                 <label class="label_identy"><?php echo $_SESSION['nom']?></label>
                 <label class="label_identy"><?php echo $_SESSION['prenom']?></label>
             </div>
@@ -53,8 +53,20 @@ session_start();
             
         </div>
         <div class="score">
-
+        <a  href="#"><a href="index2.php?p=top_score" class="label-decor"><input  class="btn-top-score" type="submit" value="Top Score"> </a>
+        <a href="#"><a href="index2.php?p=meilleur_score" class="label-decor"><input  class="btn-m-score" type="submit" value="Meilleur Score"></a>
         </div>
+
+        <?php
+        if(isset($_GET['p'])){
+            $m=$_GET['p'];
+            if($m=="top_score"){
+                include_once("../pages/top_score.php");
+            }elseif($m=="meilleur_score"){
+                include_once("../pages/meilleur_score.php");
+            }
+        }
+    ?>
 </div>
 </body>
 </html>
