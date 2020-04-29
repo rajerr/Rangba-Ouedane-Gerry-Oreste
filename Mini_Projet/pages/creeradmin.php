@@ -1,7 +1,6 @@
 <?php
 
 if(isset($_POST["creer"])) {
-    var_dump($_POST);
     $error="";
     $file_name = $_FILES['fichier']['name'];
     if(empty($_POST['nom']) && empty($_POST['prenom']) && empty($_POST['login']) && 

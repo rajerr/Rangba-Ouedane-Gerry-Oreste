@@ -4,6 +4,38 @@ body{
     background-size: cover;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+}
+.icon{
+    margin-right: 5%;
+    margin-top: 0.5%;
+    
+}
+.menu{
+    background-color: white;
+    float: left;
+    width: 100%;
+    margin-top: -1.5%;
+}
+.option{
+    list-style: none;
+    margin-left: -8%; 
+    margin-top: 9%;
+    font-size: 120%;
+}
+.option li:active{
+    color: rgb(230, 65, 65);
+}
+.option a:link{
+    color: rgb(218, 49, 49);
+}
+.option a:visited{
+    color: rgb(44, 43, 43);
+}
+.option a:hover{
+    color: rgb(135, 128, 238);
+}
 header{
     width: 100%;
     height: 80px;
@@ -176,7 +208,7 @@ header{
     vertical-align: middle;
     width: 100px;
     height: 100px;
-    margin-left: 20%;
+    margin-left: 10%;
     margin-top: 10%;
     border-radius: 50%;
     background-color: rgb(226, 225, 225);
@@ -193,11 +225,18 @@ header{
   .label_identy{
     text-decoration: none;
     font-family: 'open sans';
+    font-weight: bold;
     color:white;
     font-size: 120%;
-    margin-left: 1.5%;
+    margin-left: 20%;
+    margin-top: -20%;
   }
-.menu{
+  .div{
+      position: absolute;
+      margin-top: -5%;
+      margin-left: 10%;
+  }
+.menu1{
     margin-top: 10%;
 }
 .label-decor{
@@ -212,14 +251,18 @@ header{
 }
 .icon-menu{
     position: absolute;
-    margin-left: 23%;
+    margin-left: 10%;
+}
+.icon-menu1{
+    position: absolute;
+    margin-left: 12%;
 }
 .content{
     float: left;
     background-color: #e9f8f8;
     width: 45%;
-    margin-left: 43%;
-    margin-top: -50%;
+    margin-left: 39%;
+    margin-top: 2.5%;
     height: 550px;
     position: absolute;
     box-shadow: 4px 4px 4px 4px #aaa;
@@ -396,16 +439,17 @@ header{
 .erreur{
     color: red;
     margin-left: 20%;
+    position: absolute;
     font-family: 'open sans';
     font-style: bold;
-    margin-top: 1%;
+    margin-top: -5%;
 }
 .div-creer-joueur{
     background-color: aliceblue;
-    margin-top: -45%;
+    margin-top: 5%;
     width: 50%;
     height: 530px;
-    margin-left: 40%;
+    margin-left: 35%;
     border-radius: 5px;
     box-shadow: 8px;
     position: absolute;
@@ -559,8 +603,8 @@ header{
     float: left;
     background-color: #f8ffff;
     width: 50%;
-    margin-left: 40%;
-    margin-top: -49%;
+    margin-left: 35%;
+    margin-top: 2%;
     height: 600px;
     position: absolute;
     border-radius: 5px;
@@ -642,10 +686,20 @@ color: skyblue;
     border-radius: 5px;
 }
 .rows{
-    margin-top: -5%;
+    margin-top: -3%;
+
+}
+.rowjs{
+    width: 65%;
+    margin-top: 5%;
 }
 .row{
     width: 65%;
+    margin-top: -5%;
+}
+.rowtxt{
+    width: 80%;
+    height: 100px;
 }
 .btn-i{
     border: none;

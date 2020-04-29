@@ -1,1 +1,39 @@
-[]
+[
+    {
+        "question": "c'est une discipline qui s'applique sur un terrain de 120\/90. comptant 25 acteurs qui y participe.",
+        "point": "5",
+        "type": "TEXT",
+        "reponse": "FOOTBALL"
+    },
+    {
+        "question": "Qui est le Pr\u00e9sident actuel du S\u00e9n\u00e9gal?",
+        "point": "4",
+        "type": "SIMPLE",
+        "reponse": {
+            "1": "TRUMP",
+            "2": "MACKY SALL",
+            "3": "NGOR SECK"
+        },
+        "statut": "2"
+    },
+    {
+        "question": "le langage web?",
+        "point": "5",
+        "type": "MULTIPLE",
+        "reponse": {
+            "1": "PHP",
+            "2": "JAVA",
+            "3": "HTML"
+        },
+        "statut": {
+            "1": "on",
+            "3": "on"
+        }
+    },
+    {
+        "question": "Qui est le Pr\u00e9sident actuel du S\u00e9n\u00e9gal?",
+        "point": "3",
+        "type": "TEXT",
+        "reponse": "MACKY SALL"
+    }
+]

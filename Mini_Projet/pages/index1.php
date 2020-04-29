@@ -22,26 +22,27 @@ session_start();
        <div class="contenu">
             <div class="profil">
                <a href="index1.php"> <img class="avatar" src="../Images/avatar/<?php echo $_SESSION['profil']?>" alt=""/></a><br>
-                <label class="label_identy"><?php echo $_SESSION['nom']?></label>
-                <label class="label_identy"><?php echo $_SESSION['prenom']?></label>
+               <div class="div">
+               <label class="label_identy"><?php echo strtoupper( $_SESSION['nom']) ?></label>
+                <label class="label_identy"><?php echo strtoupper($_SESSION['prenom'])?></label>
             </div>
-        <div class="menu">
-               <a  href="#"><a href="index1.php?p=liste_questions" class="label-decor"> 
-                   <img class="icon-menu"src="../Images/Icônes/ic-liste-active.png">
-                    <h4 class="label-menu">Liste Questions</h4>
-                </a>
-                <ahref="#"><a href="index1.php?p=creer_admin"  class="label-decor">
-                    <img class="icon-menu"src="../Images/Icônes/ic-ajout.png">
-                    <h4 class="label-menu"> Créer Admin</h4>
-                </a>
-                <a href="#"><a href="index1.php?p=liste_joueurs" class="label-decor">
-                    <img class="icon-menu"src="../Images/Icônes/ic-liste.png">
-                    <h4 class="label-menu"> Liste Joueurs</h4>
-                </a>
-                <a href="#"><a href="index1.php?p=creer_questions"  class="label-decor">
-                    <img class="icon-menu"src="../Images/Icônes/ic-ajout.png">
-                    <h4 class="label-menu"> Créer Questions</h4>
-                </a>
+        <div class="menu1">
+            <nav class="menu" style="font-family: Josefin sans;">
+                    <ul>
+                        <li class="option"> <a href="index1.php?p=liste_questions" >Liste Questions
+                        <img class="icon-menu"src="../Images/Icônes/ic-liste.png">
+                        </a></li>
+                        <li class="option"><a href="index1.php?p=creer_admin" >Creer Admin
+                        <img class="icon-menu1"src="../Images/Icônes/ic-ajout.png">
+                        </a></li>
+                        <li class="option"><a href="index1.php?p=liste_joueurs">Liste Joueurs
+                        <img class="icon-menu1"src="../Images/Icônes/ic-liste.png">
+                        </a></li>
+                        <li class="option"><a href="index1.php?p=creer_questions"  >Creer Questions
+                        <img class="icon-menu"src="../Images/Icônes/ic-ajout.png">
+                        </a></li> 
+                    </ul>
+                </nav>
         </div>
        </div>
     </div>

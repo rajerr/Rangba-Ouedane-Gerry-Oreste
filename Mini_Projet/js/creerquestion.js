@@ -14,16 +14,15 @@ function creerInput(){
     if(select.value == "text"){
             newInput.innerHTML = `  
             <label class="label-qs" for="">Reponse</label>
-            <input class="row" type="text" error="error${nbr}" name="reponse" id="" placeholder="sasir la reponse">
-            <button type="button" onclick="deleteInput(${i})"><img src="../Images/Icônes/ic-supprimer.png" alt=""></button>
-            <div class="erreur" id="error${nbr}"> </div>
+            <input class="rowtxt" type="text" name="reponse" error="error" id="">
+            <div class="erreur" id="error"> </div>
             `;
             divInputs.appendChild(newInput);
     }else if(select.value == "simple"){
         newInput.innerHTML = `  
-        <label class="label-qs" id="label" for="radio${i}">Reponse${i}</label>
-        <input class="row" type="text" error="error${nbr}" name="reponse${i}" id="" placeholder="saisissez une reponse">
-        <input  type="radio" name="radio" id="radio${i}" error="error${nbr}">
+        <label class="label-qs" id="" for="radio${i}">Reponse${i}</label>
+        <input class="rowjs" type="text" error="error${nbr}" name="reponse[${i}]" id="reponse${i}" placeholder="saisissez une reponse">
+        <input  type="radio" name="radio" id="radio${i}" error="error${nbr}" value="${i}">
         <button type="button" onclick="deleteInput(${i})"><img src="../Images/Icônes/ic-supprimer.png" alt=""></button>
         <div class="erreur" id="error${nbr}"> </div>
         `;
@@ -31,8 +30,8 @@ function creerInput(){
     }else{
         newInput.innerHTML = `  
         <label class="label-qs" id="label${i}" for="check${i}">Reponse${i}</label>
-        <input class="row" type="text" error="error${nbr}" name="reponse${i}" id="reponse${i}" placeholder="saisissez une reponse">
-        <input type="checkbox" name="check${i}" id="check${i}" error="error${nbr}">
+        <input class="rowjs" type="text" error="error${nbr}" name="reponse[${i}]" id="reponse${i}" placeholder="saisissez une reponse">
+        <input type="checkbox" name="checkbox[${i}]" id="check${i}" error="error${nbr}" value"[${i}]">
         <button type="button" onclick="deleteInput(${i})"><img src="../Images/Icônes/ic-supprimer.png" alt=""></button>
         <div class="erreur" id="error${nbr}"> </div>
         `;
@@ -46,6 +45,7 @@ function deleteInput(n){
     var suppr = document.getElementById('row_'+n);
         suppr.remove();
 }
+
 
 const inputs= document.getElementsByTagName('input');
 for(input of inputs){
