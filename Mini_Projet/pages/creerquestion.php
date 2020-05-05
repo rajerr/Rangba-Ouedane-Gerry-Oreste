@@ -20,9 +20,7 @@
                     <button class="btn-i" type="button"  onclick="creerInput()"><img src="../Images/Icônes/ic-ajout-réponse.png" alt=""></button>
                     <div class="erreur" id="error3"> </div>
                 </div>
-                <?php
-        var_dump($_POST);
-        ?>
+                <!-- <?php     var_dump($_POST);?> -->
         </div>
                 <div class="erreur">
                     <?php if(isset($error)){ echo $error; }?>
@@ -39,7 +37,8 @@ if(isset($_POST['enregistrer'])){
     $select= $_POST['select'];
     $reponses=$_POST['reponse'];
     $radio= $_POST['radio'];
-    $checkbox = $_POST['checkbox'];
+    $bonne = $_POST['checkbox'];
+    
     
 
     $data=file_get_contents('../json/questions.json');
@@ -65,22 +64,24 @@ if(isset($_POST['enregistrer'])){
                         $questions['reponse'][$i]=strtoupper($reponses[$i]);
                     }
                     for($i=1; $i<=count($radio); $i++){
-                    $questions['statut']=$radio;
+                    $questions['bonne']=$radio;
                     }
                 }else {
                     if($select =="multiple"){
-                        for($i=1; $i<= count($reponses); $i++){
-                            $questions['reponse'][$i]=strtoupper($reponses[$i]);
+                       for($i=1; $i<= count($reponses); $i++){
+                        $questions['reponse'][$i]=strtoupper($reponses[$i]);
                         }
-                        for($i=1; $i<=count($checkbox); $i++){
-                            $questions['statut']=$checkbox;
+                        for($i=1; $i<=count($bonne); $i++){
+                            $questions['bonne']=$bonne;
                         }
                     }
+
                 }
             }
     $data[]=$questions;
     $data=json_encode($data);
     file_put_contents('../json/questions.json',$data);
     }
+
 }
 ?>

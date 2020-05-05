@@ -31,7 +31,7 @@ function creerInput(){
         newInput.innerHTML = `  
         <label class="label-qs" id="label${i}" for="check${i}">Reponse${i}</label>
         <input class="rowjs" type="text" error="error${nbr}" name="reponse[${i}]" id="reponse${i}" placeholder="saisissez une reponse">
-        <input type="checkbox" name="checkbox[${i}]" id="check${i}" error="error${nbr}" value"[${i}]">
+        <input type="checkbox" name="checkbox[${i}]" id="check${i}" error="error${nbr}" value="${i}">
         <button type="button" onclick="deleteInput(${i})"><img src="../Images/Icônes/ic-supprimer.png" alt=""></button>
         <div class="erreur" id="error${nbr}"> </div>
         `;

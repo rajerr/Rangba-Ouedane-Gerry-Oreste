@@ -11,44 +11,25 @@ session_start();
       }
   $NbreParPage = 15;
   $NbreTotal = count($joueurs);
-  $DernierPage = ceil($NbreTotal/$NbreParPage);
-  $NbreDePageAvAp = 4;
-  if(isset($_GET['page']) && is_numeric($_GET['page'])){
-      $PageActuelle = $_GET['page'];
-  }else{
-      $PageActuelle = 1;
-  }
-  if($PageActuelle<1){
-      $PageActuelle = 1;
-  }elseif($PageActuelle > $DernierPage){
-      $PageActuelle = $DernierPage;
-  }
-  $limit = 'LIMIT'.($PageActuelle - 1)* $NbreParPage. ',' . $NbreParPage;
-  $pagination = "";
-  if($DernierPage != 1){
-      if($PageActuelle > 1){
-          $precedent = $PageActuelle - 1;
-          $pagination .= '<a class="btnbtn" href="index1.php?p=liste_joueurs&page='.$precedent.'">Precedent</a> &nbsp;&nbsp;';
-          for($i = $PageActuelle - $NbreDePageAvAp ; $i<$PageActuelle; $i++){
-              if($i>0){
-                  $pagination .= '<a href="index1.php?p=liste_joueurs&page='.$i.'">'.$i.'</a>&nbsp;';
+  $NbrePage = ceil($NbreTotal/$NbreParPage);
+  ?>
+  <form method="post">
+  <table>
+  <?php
+  
+  if (isset($_POST['suivant'] ) && $_SESSION['fin']<$NbreTotal) {
+                  $debut=$_SESSION['fin'];
+                  $fin=$_SESSION['fin']+$NbreParPage;
+              }elseif (isset($_POST['precedent']) && $_SESSION['fin']> $NbreTotal+1) {
+                  $debut=$_SESSION['fin']-($NbreTotal+1);
+                  $fin=$_SESSION['fin']-$NbreParPage;
+              }else
+              {
+                  $debut=0; 
+                  $fin=$NbreParPage;
               }
-          }
-      }
-      $pagination .= '<span class="active">'.$PageActuelle.'</span>&nbsp;';
-
-      for($i = $PageActuelle + 1; $i <= $DernierPage; $i++){
-          $pagination .= '<a href="index1.php?p=liste_joueurs&page='.$i.'">'.$i.'</a>';
-          if($i >= $PageActuelle + $NbreDePageAvAp){
-          break;
-          }
-      }
-      if($PageActuelle != $DernierPage){
-          $suivant = $PageActuelle +1;
-          $pagination .= '<a class="btn" href="index1.php?p=liste_joueurs&page='.$suivant.'">Suivant</a>&nbsp&nbsp';
-      }
-  }
-?>
+              $_SESSION['j']=$debut+1;
+  ?>
  <div class="content">
         <div>
                <h4 class="title">LISTE DES JOUEURS PAR SCORE</4>
@@ -63,23 +44,39 @@ session_start();
 <?php
     $colonne=array_column($joueurs, 'score');
     array_multisort($colonne, SORT_DESC, $joueurs);
-            for($i=$PageActuelle*$NbreParPage; $i<$NbreTotal; $i++){
-                ?>
-                <div class="div-list-nom">
-                        <?php echo strtoupper($joueurs[$i]['nom']); ?>
-                </div>
-                <div class="div-list-prenom">
-                        <?php echo ucfirst($joueurs[$i]['prenom']);?>
-                </div>
-                <div class="div-list-score">
-                        <?php  echo $joueurs[$i]['score'] ;?>pts
-                </div><br>
-    <?php  
-            }    
-            $PageActuelle++;        
-?> 
-           </div>
-           <?php   echo '<div class="pagination" id="pagination">'.$pagination.'</div>';?>
-    </div>
+            for($i=$debut; $i <$fin ; $i++){
+                if($i<=count($joueurs)){
+                    ?>
+                    <div class="div-list-nom">
+                            <?php echo strtoupper($joueurs[$i]['nom']); ?>
+                    </div>
+                    <div class="div-list-prenom">
+                            <?php echo ucfirst($joueurs[$i]['prenom']);?>
+                    </div>
+                    <div class="div-list-score">
+                            <?php  echo $joueurs[$i]['score'] ;?>pts
+                    </div><br>
+        <?php  
+                }
+               
+            }  $_SESSION['j']++;
+            $_SESSION['fin']=$fin;
+?>
+   
+            <div class="div-btn1">
+<?php   
+                    if (isset($_POST['suivant']) OR $_SESSION['fin']>= count($joueurs)) {
+                        echo "<button  name='precedent'  style='margin-left: -30%; background-color: grey; border-radius: 5px'> Precedent</button> ";
+                    }
+                    for($page = 1; $page <=$NbrePage; $page++){
+                        echo '<a style="margin-left: 10%"  href="index1.php?p=liste_joueurs&page='.$page.'">('.$page.')</a>';
+                    }
+                    if ($_SESSION['fin']<= count($joueurs)) {
+                        echo "<button  name='suivant' style='margin-left: 10%; background-color: skyblue; border-radius: 5px'> suivant</button> ";
+                    }
+?>          </div>         
+ </div>   
 </div>
-
+</table>
+</form>
+           

@@ -20,12 +20,13 @@ session_start();
     <?php
             $users = file_get_contents('json/users.json');
             $users = json_decode($users, true);
+
     ?>
 <div class="sous-entete-joueur">
             <div class="profil_joueur">
             <img class="avatar_joueur" src="../Images/avatar/<?php echo $_SESSION['profil']?>" alt=""/><br>
-                <label class="label_identy"><?php echo $_SESSION['nom']?></label>
-                <label class="label_identy"><?php echo $_SESSION['prenom']?></label>
+                <label class="label_identy-j"><?php echo $_SESSION['nom']?></label>
+                <label class="label_identy-j"><?php echo $_SESSION['prenom']?></label>
             </div>
                 <libelle class="libelle-sous-joueur">BIENVENU SUR LA PLATEFORME DE JEU DE QUIZZ <br>JOUER ET TESTER VOTRE NIVEAU DE CULTURE GENERALE</libelle>
                     <form method="POST" action="../index.php">
@@ -33,7 +34,7 @@ session_start();
                     </form>
 </div>
 <div class="interface-joueur">
-        <div class="menu-jeux">
+        <!-- <div class="menu-jeux">
             <div class="titre-question">
                 <label class="label-joueur" for="">Question 1/5:</label><br>
                 <label class="label-joueur" for=""> Les Langages web</label>
@@ -51,7 +52,10 @@ session_start();
                 <input class="btn-suivant" type="button" value="Suivant">
             </div>
             
-        </div>
+        </div> -->
+        <?php
+        require_once('../pages/jouer.php');
+        ?>
         <div class="score">
         <a  href="#"><a href="index2.php?p=top_score" class="label-decor"><input  class="btn-top-score" type="submit" value="Top Score"> </a>
         <a href="#"><a href="index2.php?p=meilleur_score" class="label-decor"><input  class="btn-m-score" type="submit" value="Meilleur Score"></a>
@@ -64,6 +68,8 @@ session_start();
                 include_once("../pages/top_score.php");
             }elseif($m=="meilleur_score"){
                 include_once("../pages/meilleur_score.php");
+            }elseif($m=="liste_question"){
+                include_once("../pages/jouer.php");
             }
         }
     ?>

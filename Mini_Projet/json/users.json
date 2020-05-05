@@ -203,5 +203,85 @@
         "password": "emil",
         "score": 0,
         "photo": "index.jpg"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "Emmanuel Patrick",
+        "nom": "NAM-NGAI",
+        "login": "emma",
+        "password": "nicoleone\u00c9\u00c0",
+        "score": 0,
+        "photo": "Debian-Linux-Reports-Highest-Bugs-Since-1999-Ubuntu-Ranks-5th-Report.jpg"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "papa",
+        "nom": "niang",
+        "login": "orange",
+        "password": "orange",
+        "score": 0,
+        "photo": "}qDk*)S>CS"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "cellou",
+        "nom": "mamadou",
+        "login": "cellou1",
+        "password": "1234",
+        "score": 0,
+        "photo": "Carte-saint-valentin.jpg"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "tom",
+        "nom": "ngahaly",
+        "login": "tom3",
+        "password": "1234",
+        "score": 0,
+        "photo": "yahoo.png"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "tom",
+        "nom": "lesage",
+        "login": "le_sage",
+        "password": "1234",
+        "score": 0,
+        "photo": "hopital.png"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "mouhamed",
+        "nom": "mboup",
+        "login": "mboup",
+        "password": "1234",
+        "score": 0,
+        "photo": "hopital.png"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "Mafortune",
+        "nom": "Rangba",
+        "login": "Mf",
+        "password": "1234",
+        "score": 0,
+        "photo": "Carte-saint-valentin.jpg"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "havila",
+        "nom": "rangba",
+        "login": "havi",
+        "password": "1234",
+        "score": 0,
+        "photo": "Carte-saint-valentin.jpg"
+    },
+    {
+        "profil": "admin",
+        "prenom": "Gerry",
+        "nom": "Rangba",
+        "login": "oueda",
+        "password": "oueda",
+        "photo": "raj.jpg"
     }
 ]

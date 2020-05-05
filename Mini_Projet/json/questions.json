@@ -1,6 +1,6 @@
 [
     {
-        "question": "c'est une discipline qui s'applique sur un terrain de 120\/90. comptant 25 acteurs qui y participe.",
+        "question": "c'est une discipline sportive qui se deroule sur un terrain de 120\/90m. comptant 25 acteurs qui y participe.",
         "point": "5",
         "type": "TEXT",
         "reponse": "FOOTBALL"
@@ -14,7 +14,7 @@
             "2": "MACKY SALL",
             "3": "NGOR SECK"
         },
-        "statut": "2"
+        "bonne": "2"
     },
     {
         "question": "le langage web?",
@@ -25,15 +25,84 @@
             "2": "JAVA",
             "3": "HTML"
         },
-        "statut": {
-            "1": "on",
-            "3": "on"
+        "bonne": {
+            "1": "1",
+            "3": "3"
         }
     },
     {
-        "question": "Qui est le Pr\u00e9sident actuel du S\u00e9n\u00e9gal?",
+        "question": "que signifie ODC?",
         "point": "3",
         "type": "TEXT",
-        "reponse": "MACKY SALL"
+        "reponse": "ORANGE DIGITAL CENTER"
+    },
+    {
+        "question": "quelle est la premi\u00e8re ecole de codage gratuite du s\u00e9n\u00e9gal? ",
+        "point": "12",
+        "type": "SIMPLE",
+        "reponse": {
+            "1": "SIMPLON",
+            "2": "ESP",
+            "3": "SONATEL ACADEMY"
+        },
+        "bonne": "3"
+    },
+    {
+        "question": "les frameworks?",
+        "point": "3",
+        "type": "MULTIPLE",
+        "reponse": {
+            "1": "SAMANE",
+            "2": "LARAVEL",
+            "3": "FLYBOX"
+        },
+        "bonne": {
+            "1": "1",
+            "2": "2"
+        }
+    },
+    {
+        "question": "quels sont les nombres multiples de deux?",
+        "point": "4",
+        "type": "MULTIPLE",
+        "reponse": {
+            "1": "16",
+            "2": "9",
+            "3": "30"
+        },
+        "bonne": {
+            "1": "1",
+            "3": "3"
+        }
+    },
+    {
+        "question": "appareil electronique?",
+        "point": "10",
+        "type": "MULTIPLE",
+        "reponse": {
+            "1": "ORDINATEUR",
+            "2": "T\u00e9L\u00e9PHONE",
+            "3": "LIVRE"
+        },
+        "bonne": {
+            "1": "1",
+            "2": "2"
+        }
+    },
+    {
+        "question": "le langage desktop?",
+        "point": "4",
+        "type": "SIMPLE",
+        "reponse": {
+            "1": "WINDEV",
+            "2": "REACT JS"
+        },
+        "bonne": "1"
+    },
+    {
+        "question": "comment appelle-t-on un quelqu'un qui fait du velo?",
+        "point": "8",
+        "type": "TEXT",
+        "reponse": "CYCLISTE"
     }
 ]
