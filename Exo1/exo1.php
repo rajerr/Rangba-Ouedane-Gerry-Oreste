@@ -78,7 +78,7 @@ session_start();
 
 		for ($i=1; $i <=$NbreDePage ; $i++) { 
 	
-			echo ' <a href="Exercice1.php?page='.$i.'">'.$i.'</a> ';
+			echo ' <a href="../exo1.php?page='.$i.'">'.$i.'</a> ';
 		}
 	}
 	echo "<br><br><br>";

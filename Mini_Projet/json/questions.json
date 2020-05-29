@@ -1,13 +1,13 @@
 [
     {
         "question": "c'est une discipline sportive qui se deroule sur un terrain de 120\/90m. comptant 25 acteurs qui y participe.",
-        "point": "5",
+        "point": "505",
         "type": "TEXT",
         "reponse": "FOOTBALL"
     },
     {
         "question": "Qui est le Pr\u00e9sident actuel du S\u00e9n\u00e9gal?",
-        "point": "4",
+        "point": "404",
         "type": "SIMPLE",
         "reponse": {
             "1": "TRUMP",
@@ -32,13 +32,13 @@
     },
     {
         "question": "que signifie ODC?",
-        "point": "3",
+        "point": "303",
         "type": "TEXT",
         "reponse": "ORANGE DIGITAL CENTER"
     },
     {
         "question": "quelle est la premi\u00e8re ecole de codage gratuite du s\u00e9n\u00e9gal? ",
-        "point": "12",
+        "point": "120",
         "type": "SIMPLE",
         "reponse": {
             "1": "SIMPLON",
@@ -49,7 +49,7 @@
     },
     {
         "question": "les frameworks?",
-        "point": "3",
+        "point": "30",
         "type": "MULTIPLE",
         "reponse": {
             "1": "SAMANE",
@@ -63,7 +63,7 @@
     },
     {
         "question": "quels sont les nombres multiples de deux?",
-        "point": "4",
+        "point": "40",
         "type": "MULTIPLE",
         "reponse": {
             "1": "16",
@@ -77,7 +77,7 @@
     },
     {
         "question": "appareil electronique?",
-        "point": "10",
+        "point": "100",
         "type": "MULTIPLE",
         "reponse": {
             "1": "ORDINATEUR",
@@ -91,7 +91,7 @@
     },
     {
         "question": "le langage desktop?",
-        "point": "4",
+        "point": "40",
         "type": "SIMPLE",
         "reponse": {
             "1": "WINDEV",
@@ -101,7 +101,7 @@
     },
     {
         "question": "comment appelle-t-on un quelqu'un qui fait du velo?",
-        "point": "8",
+        "point": "80",
         "type": "TEXT",
         "reponse": "CYCLISTE"
     }

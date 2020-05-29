@@ -18,7 +18,7 @@ session_start();
 </header>
 <body>
     <?php
-            $users = file_get_contents('json/users.json');
+            $users = file_get_contents('../json/users.json');
             $users = json_decode($users, true);
 
     ?>
@@ -34,31 +34,14 @@ session_start();
                     </form>
 </div>
 <div class="interface-joueur">
-        <!-- <div class="menu-jeux">
-            <div class="titre-question">
-                <label class="label-joueur" for="">Question 1/5:</label><br>
-                <label class="label-joueur" for=""> Les Langages web</label>
-            </div>
-            <div  class="question">
-                    <input type="checkbox" name="" id="">
-                    <label for="male">HTML</label><br>
-                    <input type="checkbox" name="" id="">
-                    <label for="male">R</label><br>
-                    <input type="checkbox" name="" id="">
-                    <label for="male">Java</label>
-            </div>
-            <div class="div-btn">
-                <input class="btn-precedent" type="button" value="Precedent">
-                <input class="btn-suivant" type="button" value="Suivant">
-            </div>
-            
-        </div> -->
         <?php
         require_once('../pages/jouer.php');
         ?>
         <div class="score">
         <a  href="#"><a href="index2.php?p=top_score" class="label-decor"><input  class="btn-top-score" type="submit" value="Top Score"> </a>
         <a href="#"><a href="index2.php?p=meilleur_score" class="label-decor"><input  class="btn-m-score" type="submit" value="Meilleur Score"></a>
+
+        
         </div>
 
         <?php
@@ -68,7 +51,9 @@ session_start();
                 include_once("../pages/top_score.php");
             }elseif($m=="meilleur_score"){
                 include_once("../pages/meilleur_score.php");
-            }elseif($m=="liste_question"){
+            }elseif($m=="recapitulatif"){
+                include_once("../pages/recapitulatif.php");
+            }else{
                 include_once("../pages/jouer.php");
             }
         }

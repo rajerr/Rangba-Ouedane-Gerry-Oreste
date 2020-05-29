@@ -283,5 +283,22 @@
         "login": "oueda",
         "password": "oueda",
         "photo": "raj.jpg"
+    },
+    {
+        "profil": "admin",
+        "prenom": "sonatel",
+        "nom": "academy",
+        "login": "admin",
+        "password": "admin",
+        "photo": "raj.jpg"
+    },
+    {
+        "profil": "joueur",
+        "prenom": "hamilton",
+        "nom": "yakite",
+        "login": "yak",
+        "password": "1234",
+        "score": 0,
+        "photo": "hopital.png"
     }
 ]

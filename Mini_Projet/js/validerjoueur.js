@@ -8,8 +8,6 @@ for(input of inputs){
         }
     })
 }
-
-
 document.getElementById("form-joueur").addEventListener("submit",function(e){
     const inputs= document.getElementsByTagName('input');
     var error=false;
@@ -25,7 +23,6 @@ document.getElementById("form-joueur").addEventListener("submit",function(e){
     if(error){
         e.preventDefault();
     }
-
     return false
 })
 

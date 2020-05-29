@@ -54,7 +54,7 @@ session_start();
                             <?php echo ucfirst($joueurs[$i]['prenom']);?>
                     </div>
                     <div class="div-list-score">
-                            <?php  echo $joueurs[$i]['score'] ;?>pts
+                            <?php  echo "$joueurs[$i]['score'] 'pts'";?>
                     </div><br>
         <?php  
                 }
@@ -66,13 +66,10 @@ session_start();
             <div class="div-btn1">
 <?php   
                     if (isset($_POST['suivant']) OR $_SESSION['fin']>= count($joueurs)) {
-                        echo "<button  name='precedent'  style='margin-left: -30%; background-color: grey; border-radius: 5px'> Precedent</button> ";
-                    }
-                    for($page = 1; $page <=$NbrePage; $page++){
-                        echo '<a style="margin-left: 10%"  href="index1.php?p=liste_joueurs&page='.$page.'">('.$page.')</a>';
+                        echo "<button  name='precedent'  class='btnbtn1'> Precedent</button> ";
                     }
                     if ($_SESSION['fin']<= count($joueurs)) {
-                        echo "<button  name='suivant' style='margin-left: 10%; background-color: skyblue; border-radius: 5px'> suivant</button> ";
+                        echo "<button  name='suivant' class='btn1'> suivant</button> ";
                     }
 ?>          </div>         
  </div>   

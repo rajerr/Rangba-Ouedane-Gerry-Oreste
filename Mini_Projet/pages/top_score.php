@@ -11,11 +11,11 @@
     $colonne=array_column($joueurs, 'score');
     array_multisort($colonne, SORT_DESC, $joueurs);
             for($i=0; $i < 5; $i++){
-                echo strtoupper($joueurs[$i]['nom']);
-                    echo"&nbsp;&nbsp";
-                echo ucfirst($joueurs[$i]['prenom']);
-                    echo"&nbsp;&nbsp";
-                echo $joueurs[$i]['score'] .pts;
+                echo "<label class='lab'for=''>".ucfirst($joueurs[$i]['prenom'])."</label>";
+                echo"&nbsp;&nbsp";
+                echo "<label class='lab' for=''>".strtoupper($joueurs[$i]['nom'])."</label>";
+                echo"&nbsp;&nbsp";
+                echo "<label class='s' for=''>".$joueurs[$i]['score'] .'pts'."</label>";
                 echo"<br>";
             }
 

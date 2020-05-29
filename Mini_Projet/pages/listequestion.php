@@ -5,11 +5,21 @@ $questions = json_decode($data, true);
 
 $NbreParPage = 5;
 $NbrePage = ceil(count($questions)/$NbreParPage);
+$error ="";
+$_SESSION['NombreQuestion']  = 7 ;
+
+if(isset($_POST['valider'])){
+    if(empty($_POST['number']) || $_POST['number'] < 5){
+        $error ="erreur le nombre doit être supérieur ou égale à 5 ";
+    }else{
+        $_SESSION['NombreQuestion'] = $_POST['number'];
+    }
+}
+$partie = ceil(count($questions)/$_SESSION['NombreQuestion']);
 ?>
-<form method="post"> 
+<form method="post" id="liste"> 
 <table>
 <?php
-
 if (isset($_POST['suivant'] ) && $_SESSION['fin']<count($questions)) {
                 $debut=$_SESSION['fin'];
                 $fin=$_SESSION['fin']+$NbreParPage;
@@ -25,9 +35,10 @@ if (isset($_POST['suivant'] ) && $_SESSION['fin']<count($questions)) {
 ?>
 <div class="content">
     <div style="margin-top:1%">
+            <div class="erreur"  id="liste"> <?php if(isset($error)){ echo $error ;} ?></div>
             <label class="label-input">Nbre de question/jeu</label>
-            <input class="input-number" type="text" name="number" id="" value="<?php  echo $NbreParPage ?>">
-            <input class="btn_ok" type="submit" name="valider" value="ok">
+            <input class="input-number" type="text" name="number" id="number" error="error" value="<?php  echo $_SESSION['NombreQuestion']; ?>">
+            <input class="btn_ok" type="submit" name="valider" onclick="myFunction()"  value="ok">
     </div>
     <div class="border_content_lq">
         <?php 
@@ -68,13 +79,10 @@ if (isset($_POST['suivant'] ) && $_SESSION['fin']<count($questions)) {
             <div class="div-btn">
 <?php   
                     if (isset($_POST['suivant']) OR $_SESSION['fin']>= count($questions)) {
-                        echo "<button  name='precedent'  style='margin-left: 10%; background-color: grey; border-radius: 5px'> Precedent</button> ";
-                    }
-                    for($page = 1; $page <=$NbrePage; $page++){
-                        echo '<a style="margin-left: 10%"  href="index1.php?p=liste_questions&page='.$page.'">('.$page.')</a>';
+                        echo "<button  name='precedent'  class='btnbtn'> Precedent</button> ";
                     }
                     if ($_SESSION['fin']<= count($questions)) {
-                        echo "<button  name='suivant' style='margin-left: 10%; background-color: skyblue; border-radius: 5px'> suivant</button> ";
+                        echo "<button  name='suivant' class='btn'> suivant</button> ";
                     }
 ?>         
 </div>
@@ -83,4 +91,4 @@ if (isset($_POST['suivant'] ) && $_SESSION['fin']<count($questions)) {
 </table>
 </form>
    
-
+<script  type="text/javascript" src="js/valider.js"></script>

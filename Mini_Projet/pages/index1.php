@@ -36,7 +36,7 @@ $colonne=array_column($players, 'score');
 array_multisort($colonne, SORT_DESC, $players);
        for($i=0; $i < 5; $i++){
            $nom[$i] = strtoupper($players[$i]['nom']);
-           $score[$i] = $players[$i]['score'] .pts;
+           $score[$i] = $players[$i]['score'] .'pts';
         //    echo strtoupper($players[$i]['nom']);
         //        echo"&nbsp;&nbsp";
         //    echo ucfirst($players[$i]['prenom']);

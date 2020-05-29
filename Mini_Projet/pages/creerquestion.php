@@ -63,7 +63,7 @@ if(isset($_POST['enregistrer'])){
                     for($i=1; $i <= count($reponses); $i++){
                         $questions['reponse'][$i]=strtoupper($reponses[$i]);
                     }
-                    for($i=1; $i<=count($radio); $i++){
+                    for($i=1; $i<=count($radio); $i++){ 
                     $questions['bonne']=$radio;
                     }
                 }else {
